@@ -1,6 +1,32 @@
 # Body_Morphometry-Chest
 **MOAI 2022 Body Morphometry AI Segmentation Online Challenge**
 
+# Summary
+## Environment  
+- **GPU**: NVIDIA RTX 4090
+- **OS**: Windows 11
+- **Libraries**
+    - python 3.7.15
+    - PyTorch 1.11.0
+    - albumentations 1.3.0
+
+## Models  
+- UNet based (https://github.com/qubvel/segmentation_models.pytorch)
+
+|Encoder|Params, M|LB|
+|------|---|---|  
+|efficientnet-b0|4M|0.9642|  
+|efficientnet-b7|63M|0.96411|  
+|timm-mobilenetv3_large_100|2.97M|0.95877|  
+|**timm-resnest269e**|**108M**|**0.9651**|
+|resnext101_32x16d|191M|0.96075|
+|Ensembles (efficientnet-b7 + timm-resnest269e)||0.96362|
+
+## Data processing
+- Pre processing
+    - albumentation  
+- Post processing
+    - bfs
 
 # Description
 
